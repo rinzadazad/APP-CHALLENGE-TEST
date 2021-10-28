@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff">
+    <android.support.v4.widget.DrawerLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/drawer_layout">
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/app_bar" />
+            <AbsoluteLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/absoluteLayout1">
+                <RelativeLayout
+                    android:id="@+id/rlt5"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/abc_popup_background_mtrl_mult"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/layout_main1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayoutMissingAsset"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:tabTextColor="#000000"
+                            app:tabSelectedTextColor="#000000"
+                            android:minHeight="?actionBarSize"
+                            app:tabGravity="fill"
+                            app:tabIndicatorColor="@color/color_green_theme"
+                            app:tabIndicatorHeight="5dp"
+                            app:tabBackground="@color/color_blue_theme"
+                             app:tabTextAppearance="@style/MyCustomTabText" 
+                            app:tabMode="fixed" />
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerMissingAsset"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:padding="1dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </AbsoluteLayout>
+            
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:theme="@style/NavigationTheme"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/navmenu"
+            android:layout_marginTop="60dp" />
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
